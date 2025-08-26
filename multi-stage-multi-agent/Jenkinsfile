@@ -7,16 +7,17 @@ pipeline {
       }
       steps {
         
-echo '
-  public class Hello {
+        sh '''
+              echo '
+                public class Hello {
 
 
-      public static void main(String[] args)
-        {
+                      public static void main(String[] args)
+                    {
 
-                System.out.println("Hello world");
-    }
- }
+                            System.out.println("Hello world");
+                      }
+                 }
 
 ' >  Hello.java
 
@@ -27,6 +28,8 @@ javac Hello.java
 
 #run java code
 java Hello
+
+     '''
 
 }
                       
