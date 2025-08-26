@@ -20,9 +20,9 @@ echo '
 ' >  Hello.java
 
 
-
+#compile java program
 javac Hello.java
 
 
-
+#run java program
 java Hello
