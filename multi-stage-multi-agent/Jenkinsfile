@@ -33,7 +33,7 @@ java Hello
 
 }
                       
-       //sh 'mvn --version'
+  
       }
     }
     stage('Front-end') {
