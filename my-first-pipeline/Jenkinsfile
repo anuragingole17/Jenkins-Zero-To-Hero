@@ -1,12 +1,42 @@
-pipeline {
-  agent {
-    docker { image 'node:16-alpine' }
-  }
+pipeline{
+   agent any
+    
+
   stages {
-    stage('Test') {
-      steps {
-        sh 'node --version'
-      }
-    }
-  }
+
+   stage('checkout code')
+{
+
+    step {
+     
+           git branch: 'main' ,url:'https://github.com/Devops-Scripting-practice/scripting.git'
+
+
+}
+
+    stage('check jdk')
+{
+
+
+	step
+{
+        sh 'java --version'
+
+
+
+}
+}
+
+     stage('compile java program')
+{
+
+      step {
+
+	sh 'javac Code1.java'
+	sh 'java Code1'
+ } 
+
+ }
+ }
+ }
 }
